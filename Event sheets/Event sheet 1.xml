@@ -90,7 +90,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1727716968854544" title="System">
+        <event-group collapsed="1" description="" sid="1727716968854544" title="System">
             <sub-events>
                 <event-block sid="1964909116805178">
                     <conditions>
@@ -210,6 +210,16 @@
                 </action>
                 <action behavior="8Direction" id="7" name="Simulate control" sid="701683609818169" type="Sprite2">
                     <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5799172289000609">
+            <conditions>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="2721540078490133" type="Sprite" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="9291484307188351" type="Sprite">
+                    <param id="0" name="X">16</param>
                 </action>
             </actions>
         </event-block>
