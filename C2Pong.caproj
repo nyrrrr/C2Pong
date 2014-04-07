@@ -23,6 +23,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -93,6 +94,9 @@
                 </behavior-type>
                 <behavior-type name="8Direction" sid="9167292611452892">
                     <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="6881583150378056">
+                    <behavior id="DragnDrop" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
