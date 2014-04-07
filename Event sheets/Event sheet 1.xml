@@ -177,7 +177,7 @@
                 </condition>
                 <condition id="-1" name="Compare X" sid="6893695122106687" type="ball">
                     <param id="0" name="Comparison">3</param>
-                    <param id="1" name="X co-ordinate">208</param>
+                    <param id="1" name="X co-ordinate">224</param>
                 </condition>
             </conditions>
             <actions>
@@ -201,7 +201,7 @@
                 </condition>
                 <condition id="-1" name="Compare X" sid="7968882393206906" type="ball">
                     <param id="0" name="Comparison">3</param>
-                    <param id="1" name="X co-ordinate">208</param>
+                    <param id="1" name="X co-ordinate">224</param>
                 </condition>
             </conditions>
             <actions>
