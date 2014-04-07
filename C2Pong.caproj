@@ -24,7 +24,6 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -50,7 +49,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="TiledBackground" sid="3206956448522659">
             <plugin id="TiledBg" />
             <texture />
@@ -89,11 +88,11 @@
                 <behavior-type name="BoundToLayout" sid="1256717078059021">
                     <behavior id="bound" />
                 </behavior-type>
-                <behavior-type name="8Direction" sid="782081904959123">
-                    <behavior id="EightDir" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="3539811625407614">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="9167292611452892">
+                    <behavior id="EightDir" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -123,31 +122,77 @@
         </object-type>
         <object-type name="ball" sid="5745794477268776">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="resetPosition_x" sid="36893331263972" type="number" />
+                <instance-variable name="resetPosition_y" sid="1322106604412222" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="6809193425370224">
                     <behavior id="bound" />
                 </behavior-type>
-                <behavior-type name="Bullet" sid="5013017045938841">
+                <behavior-type name="Bullet" sid="9359590527406178">
                     <behavior id="Bullet" />
-                </behavior-type>
-                <behavior-type name="Physics" sid="733657732860298">
-                    <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8533212708596103" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.28125" y="0.28125" />
-                            <point x="0.5" y="0.1875" />
-                            <point x="0.71875" y="0.28125" />
-                            <point x="0.8125" y="0.5" />
-                            <point x="0.71875" y="0.71875" />
-                            <point x="0.5" y="0.8125" />
-                            <point x="0.28125" y="0.71875" />
-                            <point x="0.1875" y="0.5" />
+                            <point x="0.181818" y="0.181818" />
+                            <point x="0.5" y="0.0454545" />
+                            <point x="0.818182" y="0.181818" />
+                            <point x="0.954545" y="0.5" />
+                            <point x="0.818182" y="0.818182" />
+                            <point x="0.5" y="0.954545" />
+                            <point x="0.181818" y="0.818182" />
+                            <point x="0.0454545" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LeftScoreBarrier" sid="78594354390217">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3961052931330035" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightScoreBarrier" sid="7741864219668702">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2490445911381534" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WinText" sid="3988837878602146">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Barrier" sid="887501901138774">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5083632516914939">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6437075469745675" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Barrier2" sid="9983554629361766">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1970322529762642">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2921843800353321" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -158,6 +203,7 @@
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Controls.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
