@@ -3,157 +3,213 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <event-block sid="9683723548170465">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1234569586407265" type="ball">
-                    <param id="0" name="Object">LeftScoreBarrier</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Add to" sid="6569796111644635" type="Text">
-                    <param id="0" name="Instance variable">score_1</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Set text" sid="4753194091316718" type="Text">
-                    <param id="0" name="Text">Text.score_1 &amp; &quot;:&quot; &amp;Text.score_2</param>
-                </action>
-                <action id="-3" name="Set position" sid="3735524601561226" type="ball">
-                    <param id="0" name="X">ball.resetPosition_x</param>
-                    <param id="1" name="Y">ball.resetPosition_y</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="3796122794345329" type="ball">
-                    <param id="0" name="Speed">200</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5784562772868166">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1437858257823013" type="ball">
-                    <param id="0" name="Object">RightScoreBarrier</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Add to" sid="7222984862100292" type="Text">
-                    <param id="0" name="Instance variable">score_2</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Set text" sid="5768850587619047" type="Text">
-                    <param id="0" name="Text">Text.score_1 &amp; &quot;:&quot; &amp;Text.score_2</param>
-                </action>
-                <action id="-3" name="Set position" sid="5722457558919766" type="ball">
-                    <param id="0" name="X">ball.resetPosition_x</param>
-                    <param id="1" name="Y">ball.resetPosition_y</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="8463299768442881" type="ball">
-                    <param id="0" name="Speed">200</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1964909116805178">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="1923898365690185" type="Text">
-                    <param id="0" name="Instance variable">score_1</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">10</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="5170924731186862" type="WinText">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="0" name="Set text" sid="125451595060746" type="WinText">
-                    <param id="0" name="Text">&quot;Left player wins! &quot; &amp; newline &amp; &quot;Press any key for restart&quot;</param>
-                </action>
-                <action id="-13" name="Set time scale" sid="7875654094964362" type="System">
-                    <param id="0" name="Time scale">0</param>
-                </action>
-            </actions>
+        <event-group collapsed="1" description="" sid="6764549851134241" title="Ball">
             <sub-events>
-                <event-block sid="163885478209188">
+                <event-block sid="9683723548170465">
                     <conditions>
-                        <condition id="1" name="On any key pressed" sid="9885766504867714" type="Keyboard" />
+                        <condition id="0" name="On collision with another object" sid="1234569586407265" type="ball">
+                            <param id="0" name="Object">LeftScoreBarrier</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Restart layout" sid="8603090146415845" type="System" />
+                        <action id="-11" name="Add to" sid="6569796111644635" type="Text">
+                            <param id="0" name="Instance variable">score_1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4753194091316718" type="Text">
+                            <param id="0" name="Text">Text.score_1 &amp; &quot;:&quot; &amp;Text.score_2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="3735524601561226" type="ball">
+                            <param id="0" name="X">ball.resetPosition_x</param>
+                            <param id="1" name="Y">ball.resetPosition_y</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="3796122794345329" type="ball">
+                            <param id="0" name="Speed">200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5784562772868166">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1437858257823013" type="ball">
+                            <param id="0" name="Object">RightScoreBarrier</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="7222984862100292" type="Text">
+                            <param id="0" name="Instance variable">score_2</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5768850587619047" type="Text">
+                            <param id="0" name="Text">Text.score_1 &amp; &quot;:&quot; &amp;Text.score_2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="5722457558919766" type="ball">
+                            <param id="0" name="X">ball.resetPosition_x</param>
+                            <param id="1" name="Y">ball.resetPosition_y</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="8463299768442881" type="ball">
+                            <param id="0" name="Speed">200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5114009453487987">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2234341487947098" type="ball">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="7959402544909788" type="ball">
+                            <param id="0" name="Speed">ball.Bullet.Speed * 1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6860630490733724">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6133359943744056" type="ball">
+                            <param id="0" name="Object">Sprite2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="891440879685696" type="ball">
+                            <param id="0" name="Speed">ball.Bullet.Speed * 1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="586573767015304">
+                    <conditions>
+                        <condition behavior="Bullet" id="0" name="Compare speed" sid="5844816539826962" type="ball">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">450</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="5035610471779861" type="ball">
+                            <param id="0" name="Speed">450</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="4280884707786898">
-            <conditions>
-                <condition id="-22" name="Else" sid="4649276179381902" type="System" />
-                <condition id="-7" name="Compare instance variable" sid="2300244818948781" type="Text">
-                    <param id="0" name="Instance variable">score_2</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">10</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="7149523416468365" type="WinText">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="0" name="Set text" sid="9133937355915756" type="WinText">
-                    <param id="0" name="Text">&quot;Right player wins!&quot; &amp; newline &amp; &quot;Press any key for restart&quot;</param>
-                </action>
-                <action id="-13" name="Set time scale" sid="2410188416921156" type="System">
-                    <param id="0" name="Time scale">0</param>
-                </action>
-            </actions>
+        </event-group>
+        <event-group description="" sid="1727716968854544" title="System">
             <sub-events>
-                <event-block sid="316665729837491">
+                <event-block sid="1964909116805178">
                     <conditions>
-                        <condition id="1" name="On any key pressed" sid="7504981758919767" type="Keyboard" />
+                        <condition id="-7" name="Compare instance variable" sid="1923898365690185" type="Text">
+                            <param id="0" name="Instance variable">score_1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Restart layout" sid="2639797153335606" type="System" />
+                        <action id="-15" name="Set visible" sid="5170924731186862" type="WinText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="125451595060746" type="WinText">
+                            <param id="0" name="Text">&quot;Left player wins! &quot; &amp; newline &amp; &quot;Press any key for restart&quot;</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="7875654094964362" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="163885478209188">
+                            <conditions>
+                                <condition id="1" name="On any key pressed" sid="9885766504867714" type="Keyboard" />
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="8603090146415845" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="4280884707786898">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4649276179381902" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="2300244818948781" type="Text">
+                            <param id="0" name="Instance variable">score_2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7149523416468365" type="WinText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9133937355915756" type="WinText">
+                            <param id="0" name="Text">&quot;Right player wins!&quot; &amp; newline &amp; &quot;Press any key for restart&quot;</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="2410188416921156" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="316665729837491">
+                            <conditions>
+                                <condition id="1" name="On any key pressed" sid="7504981758919767" type="Keyboard" />
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="2639797153335606" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7041099918936002">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="9777943923415198" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="9650622035910647" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="7041099918936002">
+        </event-group>
+        <event-block sid="9489764191219235">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="9777943923415198" type="System" />
-            </conditions>
-            <actions>
-                <action id="-13" name="Set time scale" sid="9650622035910647" type="System">
-                    <param id="0" name="Time scale">1.0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5114009453487987">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="2234341487947098" type="ball">
-                    <param id="0" name="Object">Sprite</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Bullet" id="0" name="Set speed" sid="7959402544909788" type="ball">
-                    <param id="0" name="Speed">ball.Bullet.Speed * 1.1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6860630490733724">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="6133359943744056" type="ball">
-                    <param id="0" name="Object">Sprite2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Bullet" id="0" name="Set speed" sid="891440879685696" type="ball">
-                    <param id="0" name="Speed">ball.Bullet.Speed * 1.1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="586573767015304">
-            <conditions>
-                <condition behavior="Bullet" id="0" name="Compare speed" sid="5844816539826962" type="ball">
+                <condition id="-2" name="Compare Y" sid="1504974926782807" type="ball">
                     <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Speed">450</param>
+                    <param id="1" name="Y co-ordinate">Sprite2.Y + random(16)</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="8282158585443697" type="ball">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">96</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="6893695122106687" type="ball">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">208</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="0" name="Set speed" sid="5035610471779861" type="ball">
-                    <param id="0" name="Speed">450</param>
+                <action id="-16" name="Wait" sid="4449384127672238" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="6823461190673307" type="Sprite2">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8459189674168688">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="5461043044961296" type="ball">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">Sprite2.Y - random(16)</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="5920937744617298" type="ball">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">96</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="7968882393206906" type="ball">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">208</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="1445500672732112" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="701683609818169" type="Sprite2">
+                    <param id="0" name="Control">2</param>
                 </action>
             </actions>
         </event-block>

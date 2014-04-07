@@ -104,14 +104,14 @@
         <object-type name="Sprite2" sid="8947065667421668">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="8Direction" sid="2569630725935724">
-                    <behavior id="EightDir" />
-                </behavior-type>
                 <behavior-type name="BoundToLayout" sid="3906899507906937">
                     <behavior id="bound" />
                 </behavior-type>
                 <behavior-type name="Solid" sid="167268606384025">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="4202557603511902">
+                    <behavior id="EightDir" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -203,7 +203,6 @@
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Controls.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
