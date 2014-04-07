@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <event-group collapsed="1" description="" sid="6764549851134241" title="Ball">
+        <event-group description="" sid="6764549851134241" title="Ball">
             <sub-events>
                 <event-block sid="9683723548170465">
                     <conditions>
@@ -13,7 +13,7 @@
                     </conditions>
                     <actions>
                         <action id="-11" name="Add to" sid="6569796111644635" type="Text">
-                            <param id="0" name="Instance variable">score_1</param>
+                            <param id="0" name="Instance variable">score_2</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Set text" sid="4753194091316718" type="Text">
@@ -36,7 +36,7 @@
                     </conditions>
                     <actions>
                         <action id="-11" name="Add to" sid="7222984862100292" type="Text">
-                            <param id="0" name="Instance variable">score_2</param>
+                            <param id="0" name="Instance variable">score_1</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Set text" sid="5768850587619047" type="Text">
