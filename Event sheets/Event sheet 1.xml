@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <event-group description="" sid="6764549851134241" title="Ball">
+        <event-group collapsed="1" description="" sid="6764549851134241" title="Ball">
             <sub-events>
                 <event-block sid="9683723548170465">
                     <conditions>
@@ -90,7 +90,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1727716968854544" title="System">
+        <event-group description="" sid="1727716968854544" title="System">
             <sub-events>
                 <event-block sid="1964909116805178">
                     <conditions>
@@ -114,17 +114,34 @@
                     <sub-events>
                         <event-block sid="163885478209188">
                             <conditions>
-                                <condition id="1" name="On any key pressed" sid="9885766504867714" type="Keyboard" />
+                                <condition id="-20" name="Is on mobile device" sid="9885766504867714" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6681252707667674">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="755770040389699" type="Touch">
+                                            <param id="0" name="Object">Sprite</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-26" name="Restart layout" sid="8603090146415845" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8020108634093086">
+                            <conditions>
+                                <condition id="1" name="On any key pressed" sid="950342817437599" type="Keyboard" />
                             </conditions>
                             <actions>
-                                <action id="-26" name="Restart layout" sid="8603090146415845" type="System" />
+                                <action id="-26" name="Restart layout" sid="3352757800969973" type="System" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="4280884707786898">
+                <event-block sid="4280884707786898">
                     <conditions>
-                        <condition id="-22" name="Else" sid="4649276179381902" type="System" />
                         <condition id="-7" name="Compare instance variable" sid="2300244818948781" type="Text">
                             <param id="0" name="Instance variable">score_2</param>
                             <param id="1" name="Comparison">0</param>
@@ -145,11 +162,25 @@
                     <sub-events>
                         <event-block sid="316665729837491">
                             <conditions>
+                                <condition id="4" name="Is touching object" sid="6483410649941436" type="Touch">
+                                    <param id="0" name="Object">Sprite</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="2640557372264662" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="374057528424424">
+                            <conditions>
                                 <condition id="1" name="On any key pressed" sid="7504981758919767" type="Keyboard" />
                             </conditions>
                             <actions>
                                 <action id="-26" name="Restart layout" sid="2639797153335606" type="System" />
                             </actions>
+                        </event-block>
+                        <event-block sid="9736185231006757">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -165,54 +196,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="9489764191219235">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="1504974926782807" type="ball">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">Sprite2.Y + random(16)</param>
-                </condition>
-                <condition id="-1" name="Compare X" sid="8282158585443697" type="ball">
-                    <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">96</param>
-                </condition>
-                <condition id="-1" name="Compare X" sid="6893695122106687" type="ball">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="X co-ordinate">224</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="4449384127672238" type="System">
-                    <param id="0" name="Seconds">0.1</param>
-                </action>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="6823461190673307" type="Sprite2">
-                    <param id="0" name="Control">3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8459189674168688">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="5461043044961296" type="ball">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="Y co-ordinate">Sprite2.Y - random(16)</param>
-                </condition>
-                <condition id="-1" name="Compare X" sid="5920937744617298" type="ball">
-                    <param id="0" name="Comparison">5</param>
-                    <param id="1" name="X co-ordinate">96</param>
-                </condition>
-                <condition id="-1" name="Compare X" sid="7968882393206906" type="ball">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="X co-ordinate">224</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="1445500672732112" type="System">
-                    <param id="0" name="Seconds">0.1</param>
-                </action>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="701683609818169" type="Sprite2">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="5799172289000609">
             <conditions>
                 <condition behavior="DragDrop" id="0" name="Is dragging" sid="2721540078490133" type="Sprite" />
@@ -223,5 +206,57 @@
                 </action>
             </actions>
         </event-block>
+        <event-group collapsed="1" description="" sid="4180537242398028" title="AI">
+            <sub-events>
+                <event-block sid="9489764191219235">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1504974926782807" type="ball">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Sprite2.Y + random(16)</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="8282158585443697" type="ball">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">96</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="6893695122106687" type="ball">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">224</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="4449384127672238" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6823461190673307" type="Sprite2">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8459189674168688">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="5461043044961296" type="ball">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Sprite2.Y - random(16)</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="5920937744617298" type="ball">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">96</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="7968882393206906" type="ball">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">224</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="1445500672732112" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="701683609818169" type="Sprite2">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
